@@ -14,11 +14,16 @@ body {
     line-height: 1.6;
     max-width: 1400px;
     margin: 0 auto;
+    text-transform: uppercase;
 }
 
 header {
     text-align: center;
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: #000000; /* Ensure the header has a background */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .logo img {
@@ -30,6 +35,7 @@ nav ul {
     justify-content: center;
     gap: 20px;
     padding: 10px 0;
+    font-size: 1rem;
 }
 
 nav a {
@@ -80,7 +86,7 @@ ul {
 .hero-overlay {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust height as needed */
+    height: 400px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,26 +96,32 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7); /* Dim the image for better text visibility */
-    transition: transform 5s ease; /* Subtle animation effect */
+    transition: transform 5s ease; 
 }
 
 .hero-overlay:hover img {
-    transform: scale(1.1); /* Subtle zoom effect on hover */
+    transform: scale(1.1); 
 }
 
-.hero-text {
+.hero-logo {
     position: absolute;
     z-index: 2;
     color: #ffffff;
+}
+
+#hero-logo {
+    height: 250px;
+}
+
+.hero-text {
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Adds depth to text */
+    padding: 20px;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
     animation: fadeIn 2s ease-in-out;
+    color: #d4af37;
 }
 
 .hero-text p {
@@ -189,6 +201,10 @@ ul {
 .cta-button:hover {
     background-color: #ffffff; /* Invert colors on hover */
     color: #d4af37;
+}
+
+#main-cta {
+    margin-top: 0px;
 }
 
 /* ABOUT */

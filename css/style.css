@@ -1,0 +1,391 @@
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d4af37;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff; /* Gold highlight */
+}
+
+#banner {
+    background: none; /* Remove background styles if any */
+    padding: 0; /* Remove extra spacing */
+    text-align: center;
+}
+
+#banner img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #d4af37; /* Gold highlight */
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Hero Section Styling */
+#banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Dim the image for better text visibility */
+    transition: transform 5s ease; /* Subtle animation effect */
+}
+
+.hero-overlay:hover img {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Adds depth to text */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Parallax Effect (Optional) */
+.hero-overlay img {
+    transform: translateY(0);
+    will-change: transform;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SERVICES */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #d4af37; /* Gold highlight */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #d4af37; /* Gold highlight */
+    color: #000000; /* Black text for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffffff; /* Invert colors on hover */
+    color: #d4af37;
+}
+
+/* ABOUT */
+.about-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-person {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+    color: #ffffff;
+    height: 450px;
+}
+
+.about-person img {
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 4px solid #d4af37; /* Gold border around image */
+}
+
+.about-person h3 {
+    color: #d4af37; /* Gold highlight */
+    margin-bottom: 10px;
+}
+
+.about-person p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* About Us CTA Buttons */
+.about-person .cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #d4af37; /* Gold highlight */
+    color: #000000; /* Black text for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.about-person .cta-button:hover {
+    background-color: #ffffff; /* Invert colors on hover */
+    color: #d4af37;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+/* EXTRA STYLES FOR ABOUT & SERVICES */
+
+/* Common Card Styles for Flair */
+.about-person, .service-card {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent; /* Initial border */
+    background-clip: padding-box; /* Ensures the border color only applies to edges */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space out content evenly */
+    align-items: center; /* Center-align items */
+}
+
+.about-person:hover, .service-card:hover {
+    transform: translateY(-10px); /* Lifts the card on hover */
+    border-color: #d4af37; /* Gold border on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+/* Subtle Decorative Overlay Effect */
+.about-person::before, .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.3));
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-person:hover::before, .service-card:hover::before {
+    opacity: 1; /* Overlay appears on hover */
+}
+
+/* Text Content Styling for Cards */
+.about-person h3, .service-card h3 {
+    position: relative;
+    z-index: 1; /* Ensures text is above overlay */
+}
+
+.about-person p, .service-card p, .cta-button {
+    position: relative;
+    z-index: 1;
+}
+
+.text-container {
+    flex: 1; /* Take up available vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to the top */
+    align-items: center; /* Center-align text horizontally */
+    margin-bottom: 15px; /* Add space between text and button */
+}
+
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    font-size: 5rem; /* Adjust the size of the Font Awesome icons */
+    color: #d4af37; /* Gold highlight */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover .contact-icon {
+    transform: scale(1.2); /* Slight enlargement on hover */
+    color: #ffffff; /* Invert color on hover */
+}
+
+.contact-item {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #d4af37;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px;
+    width: 350px;
+}
+
+.contact-item p, .contact-item a {
+    margin: 0;
+    font-size: 1rem;
+    color: #d4af37;
+}
+
+.map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 250px;
+}
+
+/* Sparkle Canvas Styling */
+#sparkleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with the canvas */
+    z-index: 999; /* Ensure it's above all content */
+}
+
+/* FOOTER */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}

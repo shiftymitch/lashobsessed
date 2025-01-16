@@ -17,14 +17,45 @@ body {
     text-transform: uppercase;
 }
 
+/* Default Header Style */
 header {
     text-align: center;
     padding: 20px 0;
     position: sticky;
     top: 0;
-    background-color: #000000; /* Ensure the header has a background */
-    z-index: 1000; /* Ensure it stays above other content */
+    background-color: #000000; 
+    z-index: 1000; 
 }
+
+header {
+    padding: 20px 0;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* Scrolled Header Style */
+header.scrolled {
+    padding: 5px 0; 
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+header.scrolled ul {
+    gap: 5px; 
+    padding: 5px 0; 
+}
+
+header.scrolled li {
+    margin: 0 10px;
+}
+
+header.scrolled a {
+    font-size: 0.9rem; 
+}
+
+header.scrolled .cta-button {
+    padding: 8px 12px; 
+    font-size: 0.9rem; 
+}
+
 
 .logo img {
     max-width: 150px;
@@ -406,4 +437,11 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 0.9rem;
+}
+
+/* media responsive */
+@media screen and (max-width: 768px) {
+    header {
+        
+    }
 }

@@ -172,6 +172,7 @@ ul {
 .service-card img {
     width: 100%;
     height: auto;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -230,6 +231,7 @@ ul {
 .about-person img {
     width: 90%;
     height: auto;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 10px;
     border-radius: 50%;

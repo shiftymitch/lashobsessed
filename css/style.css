@@ -289,7 +289,7 @@ ul {
 }
 
 /* Subtle Decorative Overlay Effect */
-/* .about-person::before, .service-card::before {
+.about-person::before, .service-card::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -301,7 +301,7 @@ ul {
 
 .about-person:hover::before, .service-card:hover::before {
     opacity: 1; 
-} */
+}
 
 /* Text Content Styling for Cards */
 .about-person h3, .service-card h3 {

@@ -257,7 +257,7 @@ ul {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    min-height: 500px;
+    max-width: 300px;
     color: #ffffff;
     height: 450px;
 }

@@ -86,7 +86,7 @@ nav a:hover {
     text-align: center;
 }
 
-#banner img {
+#banner-img {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
@@ -138,10 +138,13 @@ ul {
     position: absolute;
     z-index: 2;
     color: #ffffff;
+    display: flex;
+    align-items: center;
 }
 
 #hero-logo {
-    max-width: 90%;
+    max-width: 450px;
+    height: auto;
 }
 
 .hero-text {
@@ -441,7 +444,7 @@ footer {
 
 /* media responsive */
 @media screen and (max-width: 768px) {
-    header {
-        
+    #hero-logo {
+        max-width: 350px;
     }
 }
